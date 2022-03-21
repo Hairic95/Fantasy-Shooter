@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/sounds/shoot.wav" type="AudioStream" id=1]
+[ext_resource path="res://src/entities/player/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/entities/bullet/Bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/textures/battle/characters/Mage/mage_gun.png" type="Texture" id=5]
+
+[node name="FollowPlayer" type="KinematicBody2D"]
+script = ExtResource( 2 )
+bullet_reference = ExtResource( 3 )
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Gun" type="Sprite" parent="."]
+position = Vector2( 0, -30 )
+texture = ExtResource( 5 )
+offset = Vector2( 15, -2 )
+
+[node name="BulletOrigin" type="Position2D" parent="Gun"]
+position = Vector2( 57, -1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+
+[node name="PushBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PushBox"]
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="ReloadTimer" type="Timer" parent="Timers"]
+wait_time = 0.2
+
+[node name="IFrames" type="Timer" parent="Timers"]
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 1 )
+volume_db = -24.0
+
+[connection signal="timeout" from="Timers/ReloadTimer" to="." method="_on_ReloadTimer_timeout"]
+[connection signal="timeout" from="Timers/IFrames" to="." method="_on_IFrames_timeout"]

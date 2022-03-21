@@ -1,0 +1,198 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/fonts/SpecialElite-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/scenes/MainMenuScene.gd" type="Script" id=3]
+[ext_resource path="res://assets/textures/menu/key_right.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/menu/key.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/menu/key_down.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/menu/key_left.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/menu/key_up.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -299.0
+margin_top = 48.0
+margin_right = 299.0
+margin_bottom = 121.0
+custom_fonts/font = SubResource( 1 )
+text = "Fantasy Shooter"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -370.5
+margin_top = -153.0
+margin_right = 370.5
+margin_bottom = -80.0
+custom_fonts/font = SubResource( 1 )
+text = "Press Enter to start"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 189.342, 291.439 )
+scale = Vector2( 4, 4 )
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 0, -7.99999 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Node2D/Sprite"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 25.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "W"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="Node2D"]
+position = Vector2( 0, 10 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Node2D/Sprite2"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 24.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "S"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="Node2D"]
+position = Vector2( -18, 10 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Node2D/Sprite3"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 23.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "A"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="Node2D"]
+position = Vector2( 18.2227, 9.68502 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Node2D/Sprite4"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 24.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "D"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Node2D"]
+margin_left = -21.0
+margin_top = 24.0
+margin_right = 61.0
+margin_bottom = 57.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "MOVE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 942.32, 307.219 )
+scale = Vector2( 4, 4 )
+
+[node name="Sprite" type="Sprite" parent="Node2D2"]
+position = Vector2( 0, -7.99999 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Node2D2"]
+position = Vector2( 0, 10 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="Node2D2"]
+position = Vector2( -18, 10 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="Node2D2"]
+position = Vector2( 18.2227, 9.68502 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Node2D2"]
+margin_left = -22.7937
+margin_top = 21.8095
+margin_right = 76.2063
+margin_bottom = 54.8095
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "SHOOT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
